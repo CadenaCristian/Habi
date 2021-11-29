@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from INMUEBLES.inmuebles import consultar_inmuebles
 
 app = FastAPI(
-    title='Prueba',
-    description='Estamos haciendo una prueba con FASTAPI',
+    title='Prueba para desarrollador backend',
+    description='Esta es una prueba para desarrollador backend en Habi, sin el uso de Framework, por ende se usa fastAPI, la cual es una libreria.',
     version='1.0.1'
 )
 
