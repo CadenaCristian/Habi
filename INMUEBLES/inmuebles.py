@@ -2,7 +2,7 @@ from DB.db_conection import data_base_conection
 from .querys import originalQuery, allData, filter_by_year, filter_year_city, filter_year_city_state
 
 
-def consultar_inmuebles(year, city, state):
+def consultar_inmuebles(year='0', city='0', state='0'):
     results = []
     obj_data = {}
     query_structure = ''
@@ -21,7 +21,6 @@ def consultar_inmuebles(year, city, state):
     cHandler.execute(query_structure)
     response = cHandler.fetchall()
     if response != ():
-        print("response: ", response)
         for x in response:
             obj_structure = {"Direccion": x[0], "Ciudad": x[1], "Estado": x[2],
                              "Precio_de_venta": x[3], "Descripcion": x[4]}
@@ -30,5 +29,6 @@ def consultar_inmuebles(year, city, state):
                         "message": "Se retorna la data con exito", "data": results}
     else:
         obj_data = {"error": False,
-                    "message": "No se encuentra data que coincida con los filtros seleccionados"}
+                    "message": "No se encuentra data que coincida con los filtros seleccionados",
+                    "data": []}
     return obj_data
