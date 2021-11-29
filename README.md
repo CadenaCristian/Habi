@@ -12,4 +12,4 @@
   uvicorn main:app --reload
 - Luego de eso puede colocar la siguiente url en cualquier aplicativo para hacer peticiones ya sea postman, thunder client u otro: http://localhost:8000/
 
-4. Para la resolución del segundo punto, se planteo la creación de la [create_table_history_user_like.sql](create_table_history_user_like.sql) tabla la cual almacenara los likes dados por cada usuario, la tabal simplemente esta relacionada a la tabla auth_user y a la tabla property, esta tabla cumpliria con almacenar la data del usuario que da el like y el inmueble al cual le dio like.
+4. Para la resolución del segundo punto, se planteo la creación de la [create_table_history_user_like.sql](create_table_history_user_like.sql) tabla la cual almacenara los likes dados por cada usuario, la tabla simplemente esta relacionada a la tabla auth_user y a la tabla property, esta tabla cumpliria con almacenar la data del usuario que da el like y el inmueble al cual le dio like.
